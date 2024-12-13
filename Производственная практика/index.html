@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    <title>ПЕРЕВОЗКА ГРУЗОВ</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="ТЕКА 1.png" alt="TEKA" class="logo"> 
+            <div class="contact">
+                <div class="contact-location">
+                    <img src="location-marker.png" alt="Location">
+                    <span><b>г. Самара, ул. Авроры, д. 114А, офис 204-205</b></span>
+                </div>
+                <div class="contact-mail">
+                    <img src="mail.png" alt="Email">
+                    <span><b>teka-samara@mail.ru</b></span>
+                </div>
+                <div class="contact-phone">
+                    <img src="phone.png" alt="Phone">
+                    <span><b>+7 (846) 273-61-61<br>+7 (906) 125-31-13</b></span>
+                </div>
+            </div>
+            <button class="button" id="open-fancybox"><b>РАСЧИТАТЬ СТОИМОСТЬ</b></button>
+        </div>
+        <div id="fancybox-content2" style="display: none;">
+            <div class="fancybox-inner">
+              <h3 class="zagolovok3">Рассчитайте сроки и время доставки вашего груза индивидуально!</h3>
+              <form id="delivery-form">
+                <div>
+                <h4 class="h4">Укажите адрес погрузки и адрес выгрузки</h4>
+                    <div class="adress-pogruzki">
+                        <select id="address-loading">
+                            <option value="Адрес погрузки:">Выберите адрес</option>
+                        </select>
+                        <select id="address-unloading">
+                            <option value="Адрес выгрузки:">Выберите адрес</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                <h4 class="h4">Выберите параметры груза</h4>
+                <div class="parametri-gruza">
+                    <div>
+                        <select id="weight">
+                            <option value="Вес груза, тонн:">Вес груза, тонн:</option>
+                        </select>
+                        <select id="dimensions">
+                            <option type="text" id="dimensions" placeholder="Габариты"> Габариты груза (ДхШхВ):</option>
+                        </select>
+                        <select id="cargo-type">
+                            <option value="Характер груза:">Характер груза:</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#yslugi">УСЛУГИ</a></li>
+            <li><a href="#preimushestva">ПРЕИМУЩЕСТВА</a></li>
+            <li><a href="#itapirabot">ЭТАПЫ РАБОТЫ</a></li>
+            <li><a href="#">ОТЗЫВЫ</a></li>
+            <li><a href="#compania">О КОМПАНИИ</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contacti">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
+    <div class="container1">
+        <div class="section">
+            <div class="text-block">
+                <h1>Перевозка негабаритных и крупнотоннажных грузов</h1>
+                <button class="button1">Наш автопарк</button>
+            </div>
+        </div>
+        <div class="section1">
+            <div class="form-container">
+                <h3>Заполните форму и мы вам перезвоним</h3>
+                <label for="name">Имя</label>
+                <input type="text" id="name" placeholder="Имя" value="Иван Иванов">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" placeholder="Телефон" value="+7__ __ _ _">
+                <label for="comments">Комментарии</label>
+                <textarea id="comments" placeholder="Комментарии" rows="4">Поле для ввода</textarea>
+                <button class="button2" id="cnopka">Заказать звонок</button>
+            </div>
+        </div>
+    </div>
+    <div class="container2" id="yslugi">
+        <hr class="line">
+        <h2>УСЛУГИ, КОТОРЫЕ МЫ ПРЕДОСТАВЛЯЕМ</h2>
+        <div class="service">
+            <div class="service-item">
+                <img src="Property 1=Контейнер.png" alt="По России и СНГ" class="service-icon">
+                <h3 class="service-text">По России и СНГ</h3>
+                <div class="service-description">Перевозка негабаритных и<br> крупнотоннажных грузов по<br> России, СНГ</div>
+            </div>
+            <div class="service-item">
+                <img src="Property 1=Китай.png" alt="Перевозка из Китая" class="service-icon">
+                <h3 class="service-text">Перевозка из Китая</h3>
+                <div class="service-description">Перевозка негабарита и КТГ из<br> Китая в Россию</div>
+            </div>
+            <div class="service-item">
+                <img src="Property 1=Ящики.png" alt="Перевозим до 20 т" class="service-icon">
+                <h3 class="service-text">Перевозим до 20 т.</h3>
+                <div class="service-description">Перевозка габаритного груза до<br> 20 т по России, СНГ</div>
+            </div>
+        </div>
+        <div class="service1">
+            <div class="service-item1">
+                <img src="Property 1=Экскаватор.png" alt="Спецтехника" class="service-icon1">
+                <h3 class="service-text">Спецтехника</h3>
+                <div class="service-description">Аренда спецтехники<br> (тралы, краны)</div>
+            </div>
+            <div class="service-item1">
+                <img src="Property 1=Европа.png" alt="Перевозки за рубеж" class="service-icon1">
+                <h3 class="service-text">Перевозки за рубеж</h3>
+                <div class="service-description">Мультимодальные<br> перевозки<br> (Европа, ЮВА, СНГ)</div>
+            </div>
+            <div class="service-item1">
+                <img src="Property 1=Кран.png" alt="Такелажные работы" class="service-icon1">
+                <h3 class="service-text">Такелажные работы</h3>
+                <div class="service-description">Такелажные работы<br> (аренда крана,<br> портальных систем)</div>
+            </div>
+            <div class="service-item1">
+                <img src="Property 1=Документы.png" alt="Сопровождение" class="service-icon1">
+                <h3 class="service-text">Сопровождение</h3>
+                <div class="service-description">Оформление<br> спецразрешений,<br> сопровождение груза,<br> автомобили прикрытия</div>
+            </div>
+        </div>
+        <button class="button3" id="open-fancybox2">Рассчитать стоимость</button>
+    </div>
+    <div id="fancybox-content" style="display: none;">
+        <div class="fancybox-inner">
+          <h3 class="zagolovok2">Рассчитайте сроки и время доставки вашего груза индивидуально!</h3>
+          <form id="delivery-form">
+            <div>
+            <h4 class="h4">Укажите адрес погрузки и адрес выгрузки</h4>
+                <div class="adress-pogruzki">
+                    <select id="address-loading">
+                        <option value="Адрес погрузки:">Выберите адрес</option>
+                    </select>
+                    <select id="address-unloading">
+                        <option value="Адрес выгрузки:">Выберите адрес</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+            <h4 class="h4">Выберите параметры груза</h4>
+            <div class="parametri-gruza">
+                <div>
+                    <select id="weight">
+                        <option value="Вес груза, тонн:">Вес груза, тонн:</option>
+                    </select>
+                    <select id="dimensions">
+                        <option type="text" id="dimensions" placeholder="Габариты"> Габариты груза (ДхШхВ):</option>
+                    </select>
+                    <select id="cargo-type">
+                        <option value="Характер груза:">Характер груза:</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4 class="h4">Выберите параметры транспорта</h4>
+            <div class="parametri-transporta">
+                <div>
+                    <select id="body-type">
+                        <option value="Тип кузова:">Тип кузова:</option>
+                    </select>
+                </div>
+                <div>
+                    <select id="transport-type">
+                        <option value="Вид транспорта:">Вид транспорта:</option>
+                    </select>
+                </div>
+            <div>
+                <select id="loading-type">
+                    <option value="Тип загрузки:">Тип загрузки:</option>
+                </select>
+            </div>
+            </div>
+        </div>
+            <div class="contact1">
+                <select id="name">
+                    <option value="Ваше имя"> Ваше имя:</option>
+                </select>
+                <select id="phone-phone">
+                    <option id="phone-phone" placeholder="+7___-__-__">+7___-__-__</option>
+                </select>
+                <button class="button19" type="submit" style="color: white; margin-top: 20px;">Рассчитать стоимость и сроки доставки</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    <div class="container3" id="preimushestva">
+        <hr class="line1">
+        <h2 class="advantage">НАШИ ПРЕИМУЩЕСТВА</h2>
+        <p class="p">Почему стоит работать именно с нами?</p>
+
+        <div class="advantages">
+            <div class="advantage-item">
+                <img src="Frame 2 (7).png" alt="Собственная техника" class="advantage-icon">
+                <div class="advantage-title">Собственная техника</div>
+                <div class="advantage-description">Собственный парк тягачей и<br> тралов различной<br>модификации.</div>
+            </div>
+            <div class="advantage-item">
+                <img src="Frame 2 (5).png" alt="Большой опыт" class="advantage-icon">
+                <div class="advantage-title">Большой опыт</div>
+                <div class="advantage-description">Опыт работы более 9 лет<br> (Россия, СНГ, Китай).</div>
+            </div>
+            <div class="advantage-item">
+                <img src="Frame 2 (4).png" alt="Расчёт стоимости" class="advantage-icon">
+                <div class="advantage-title">Расчёт стоимости</div>
+                <div class="advantage-description">Оперативный расчёт стоимости<br> перевозки.</div>
+            </div>
+        </div>
+        <div class="advantages1">
+            <div class="advantage-item">
+                <img src="Frame 2 (1).png" alt="Гарантия" class="advantage-icon">
+                <div class="advantage-title">Гарантия</div>
+                <div class="advantage-description">Гарантия сохранности груза.</div>
+            </div>
+            <div class="advantage-item">
+                <img src="Frame 2 (2).png" alt="Любые габариты" class="advantage-icon">
+                <div class="advantage-title">Любые габариты</div>
+                <div class="advantage-description">Перевозка крупногабаритных<br> грузов.</div>
+            </div>
+            <div class="advantage-item">
+                <img src="Frame 2 (3).png" alt="Перевозка техники" class="advantage-icon">
+                <div class="advantage-title">Перевозка техники</div>
+                <div class="advantage-description">Перевозка строительной<br> техники.</div>
+            </div>
+        </div>
+    </div>
+    <div class="container4">
+        <hr class="line2">
+        <div class="text-section">
+            <h1 class="transportation">НЕГАБАРИТНЫЕ<br> И ПРОЕКТНЫЕ<br> ПЕРЕВОЗКИ ИЗ КИТАЯ</h1>
+            <p class="transport">Являясь всего лишь частью общей картины, некоторые особенности внутренней политики лишь добавляют фрагментации разногласий и ассоциативно распределены по отраслям. Современные технологии достигли такого уровня, что сплочённость команды профессионалов предопределяет высокую востребованность своевременного выполнения сверхзадач. Таким образом, разбавленное изрядной долей эмпатии, рациональное мышление создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса экономической целесообразности.</p>
+            <a href="#form-container" class="button4">Заказать звонок</a>
+        </div>
+        <div>
+            <div class="map-container">
+                <img src="Vector.png" alt="Карта Китая" class="map">
+            </div>
+            <div class="certificate-container">
+                <img src="image 3.png" alt="Сертификат" class="certificate">
+                <h3 class="heading">Заголовок</h3>
+                <p class="head">Следует отметить, что новая модель организационной деятельности.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container5">
+        <div class="image-container">
+            <img src="pngwing 2.png" alt="Мультимодальные перевозки" class="image">
+        </div>
+        <div>
+            <hr class="line3">
+            <h1 class="traffic">МУЛЬТИМОДАЛЬНЫЕ ПЕРЕВОЗКИ</h1>
+            <p class="traffic1">И нет сомнений, что акционеры крупнейших компаний освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, заблокированы в рамках своих собственных рациональных ограничений. Вот вам яркий пример современных тенденций — базовый вектор развития современных предпосылок для поэтапного и последовательного развития общества. Картельные сговоры не допускают ситуации, при которой стремишься вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако.</p>
+            <a href="#form-container" class="button5">Заказать звонок</a>
+        </div>
+    </div>
+    <div class="container6" id="compania">
+        <hr class="line4">
+        <h2 class="company">О НАШЕЙ КОМПАНИИ</h2>
+        <div class="text-section1">
+            <p class="broken">Транспортная компания ТЭКА специализируется на организации перевозок негабаритных и крупнотоннажных грузов (оборудование для объектов Нефти и газа (Upstream/Midstream/Downstream), трансформаторы, буровые, емкости, металлоконструкции, тяжелая техника, краны и т.д.). Участвует в перевозках проектных грузов. Работаем по всей России, активно участвуем в проектах Казахстана и Узбекистана. Осуществляем импорт из Китая (через Дальний Восток, РФ / а также Хоргос, РК). Собственный парк техники различной модификации и грузоподъемности, с оборудованной GPS-навигацией. Данным парком не ограничиваемся. </p>
+            <p class="broken1">Имеется успешный опыт организации необходимого количества тралов и фур, в зависимости от сложности проекта. Базируемся в Самаре, но не привязаны к региону. 
+                Компания на рынке перевозок более 9 лет. Большой опыт организации негабаритных перевозок по России и странам СНГ. Успешно работаем по направлению поставок из Китая на заводы в РФ по доставке крупногабаритного груза. Благодаря профессионализму и экспертности сотрудников ТЭКА, компания выполняет перевозки любой сложности, отвечая всем требованиям клиента.</p>
+        </div>
+        <div class="image-container">
+            <img src="broken-low-loading-semitrailers-ru_f 1.png" alt="Грузовой автомобиль" class="image1"> 
+        </div>
+    </div>
+    <div class="container7">
+        <hr class="line5">
+        <h2 class="consultation">НУЖНА КОНСУЛЬТАЦИЯ?</h2>
+        <p class="application">Оставьте заявку и наш специалист свяжется с вами.</p>
+        <form>
+            <div class="name1">
+                <label class="label" for="name">Имя</label>
+                <input class="input1" type="text" placeholder="Иван Иванов"  >
+            </div>
+            <div class="phone1">
+                <label  class="label" for="phone">Телефон </label>
+                <input  class="input1" type="tel" placeholder="+7__ __ _ _" >
+            </div>
+        <button class="button6">Отправить заявку</button>
+    </div>
+    <div class="container8" id="itapirabot">
+        <hr class="line6">
+        <h1 class="client">ЭТАПЫ РАБОТЫ С КЛИЕНТАМИ</h1>
+        <p class="client1">Почему стоит работать именно с нами?</p>
+        <div class="step-container">
+          <div class="step">
+            <h2 class="st">Шаг 1</h2>
+            <p>Получение запроса на перевозку</p>
+          </div>
+          <div class="step1">
+            <h2 class="st">Шаг 2</h2>
+            <p>Ознакомление и расчет стоимости перевозок</p>
+          </div>
+          <div class="step2">
+            <h2 class="st">Шаг 3</h2>
+            <p>Подписание договора</p>
+          </div>
+          <div class="step3">
+            <h2 class="st">Шаг 4</h2>
+            <p>Внесение предоплаты</p>
+          </div>
+          <div class="step4">
+            <h2 class="st">Шаг 5</h2>
+            <p>Осуществление перевозки</p>
+          </div>
+        </div>
+        <button class="button7">Оформить перевозку</button>
+        <hr class="line-step">
+        <hr class="line-step1">
+        <hr class="line-step2">
+        <hr class="line-step3">
+        <hr class="line-step4">
+        <hr class="line-step5">
+        <hr class="line-step6">
+        <hr class="line-step7">
+        <hr class="line-step8">
+        <hr class="line-step9">
+        <hr class="line-step10">
+        <img src="Group 21.png" class="image2">
+        <img src="Group 21.png" class="image3">
+        <img src="Group 21.png" class="image4">
+        <img src="Group 21.png" class="image5">
+        <img src="Group 21.png" class="image6">
+    </div>
+    <div class="container9">
+        <hr class="line7">
+        <h2 class="client2">НАШИ КЛИЕНТЫ</h2>
+            <div class="logo1">
+                <img src="tyazhmash.png" alt="Тяжмаш" class="logotip">
+                <img src="semeq.png"alt="Cemeq Minerals" class="logotip">
+                <img src="chimstalkom.png" alt="Химсталкон" class="logotip1">
+                <img src="Rs progress.png" alt="РКЦ Прогресс" class="logotip1">
+            </div>
+            <div class="logo2">
+                <img src="logo-wide 1.png" alt="Строймашина" class="logotip2">
+                <img src="page-referal 1.png" alt="Mammoet" class="logotip">
+                <img src="zavkom.png"alt="Завком" class="logotip2">
+            </div>
+            <div class="logo3">
+                <img src="image 2.png" alt="SOP&G" class="logotip">
+                <img src="image 1.png" alt="SArens" class="logotip2">
+                <img src="image 34.png" alt="Уралхиммаш" class="logotip">
+            </div>
+        </div>
+    </div> 
+    <div class="container10">
+        <hr class="line8">
+            <h2>ПАРК ТЕХНИКИ</h2>
+            <p class="park">Собственный парк техники</p>
+        <div class="buttons">
+            <button class="button8">Автокран</button>
+            <button class="button9">Экскаватор</button>
+            <button class="button10">Трейлер</button>
+            <button class="button11">Контейнеровоз</button>
+            <button class="button12">Самосвал</button>
+        </div>
+        <div class="content1">
+            <div class="text-content">
+                <h3 class="autokran">Автокран</h3>
+                <p class="p1">Не следует, однако, забывать, что базовый вектор развития представляет собой интересный эксперимент проверки поэтапного и последовательного развития общества. С учётом сложившейся международной обстановки, базовый вектор.</p>
+                <div class="characteristics">
+                    <h3 class="character">Характеристки</h3>
+                    <p class="p1">Характеристика --------------- 2022</p>
+                    <p class="p1">Характеристика --------------- 2022</p>
+                    <p class="p1">Характеристика --------------- 2022</p>
+                    <button href="#form-container" class="button13">Заказать звонок</button>
+                    <div class="image-container">
+                        <img src="pngwing 1.png" alt="Автокран" class="image-autokran">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="container11">
+            <hr class="line9">
+              <h1 class="numbers">ТЕКА В ЦИФРАХ</h1>
+            <div class="stats">
+              <div class="stat">
+                <img src="Group 22.png" alt="Автокран" class="image8">
+                <div class="stat-number">1200</div>
+                <h3 class="h3_1">Единиц транспорта</h3>
+                <p class="p2">Имеется спорная точка<br> зрения, гласящая.</p>
+              </div>
+              <div class="stat">
+                <img src="Group 22.png" alt="Автокран" class="image8">
+                <div class="stat-number">15</div>
+                <h3 class="h3_1">Лет на рынке</h3>
+                <p class="p2">Есть над чем задуматься:<br> многие известные.</p>
+              </div>
+              <div class="stat">
+                <img src="Group 22.png" alt="Автокран" class="image8">
+                <div class="stat-number">6455</div>
+                <h3 class="h3_1">Тонн груза доставлено</h3>
+                <p class="p2">Задача организации, в<br> особенности же.</p>
+              </div>
+              <div class="stat">
+                <img src="Group 22.png " alt="Автокран" class="image8">
+                <div class="stat-number">12</div>
+                <h3 class="h3_1">Офисов</h3>
+                <p class="p2">Разнообразный и богатый<br> опыт говорит нам.</p>
+              </div>
+            </div>
+          </div> 
+          <div class="container12">
+            <hr class="line10">
+              <h1 class="project">ПРИМЕРЫ ВЫПОЛНЕННЫХ ПРОЕКТОВ</h1>
+              <p class="project1">Проекты, которые мы организовали.</p>        
+            <div class="project3">
+              <div class="project-details">
+                <h3 class="Zagolovok">Заголовок</h3>
+                <p class="p2">Безусловно, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке новых предложений. Вот вам яркий пример.</p>
+                <h3 class="Zagolovok">Характеристики проекта</h3>
+                <p class="p2">Характеристика --------------- 2022</p>
+                <p class="p2">Характеристика --------------- 2022</p>
+                <p class="p2">Характеристика --------------- 2022</p>
+                <button href="#form-container" class="button14">Отправить запрос</button>
+                <button class="button15">&lt;</button>
+                <button class="button16">&gt;</button>
+              </div>
+            <div class="project-image">
+                <img src="Rectangle 18.png" alt="Проект" class="project-image">
+            </div>
+        </div>
+    </div>
+    <div class="container13" id="faq">
+        <hr class="line10">
+          <h1 class="question">ЧАСТЫЕ ВОПРОСЫ</h1>
+          <p class="faq">FAQ</p>
+          <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">Учитывая ключевые сценарии поведения, постоянный количественный.</div>
+                    <span class="faq-arrow"></span>  
+                    <div class="faq-answer">
+                        <p>Answer 1</p>
+                    </div>
+                </div>
+            <div class="faq-item">
+                <div class="faq-question">Как уже неоднократно упомянуто, многие известные личности.</div>
+                    <span class="faq-arrow"></span>  
+                    <div class="faq-answer">
+                        <p>Answer 2</p>
+                    </div>
+                </div>
+            <div class="faq-item">
+                <div class="faq-question">Приятно, граждане, наблюдать, как независимые государства.</div>
+                <span class="faq-arrow"></span>  
+                <div class="faq-answer">
+                    <p>Answer 3</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Безусловно, современная методология разработки играет важную.</div>
+                <span class="faq-arrow"></span>  
+                <div class="faq-answer">
+                    <p>Answer 4</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Современные технологии достигли такого уровня, что.</div>
+                <span class="faq-arrow"></span>  
+                <div class="faq-answer">
+                    <p>Answer 5</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container14" id="contacti">
+        <hr class="line11">
+        <h1 class="adress">АДРЕСА И КОНТАКТЫ</h1>
+        <div class="section3">
+        <div class="section-left">
+            <h3 class="contact-info">Контактная информация</h3>
+            <p class="p3">Общество с Ограниченной Ответственностью «ТЭКА» (ООО «ТЭКА»)</p>
+            <p class="zagolovok1">Адрес юридический:</p>
+            <p class="p3">443079, г. Самара, ул. Авроры, д. 114А, офис 204-205</p>
+            <p class="zagolovok1">Адрес почтовый:</p>
+            <p class="p3">443079, г. Самара, ул. Авроры, д. 114А, офис 204-205</p>
+            <p class="zagolovok1">Телефоны:</p>
+            <p class="p3">+7 (906) 125-31-13<br>8 (846) 273-61-61</p>
+            <p class="zagolovok1">E-mail:</p>
+            <p class="p3">teka-samara@mail.ru</p>
+            <div class="social-media">
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-viber"></i></a>
+            </div>
+            <div class="socials-image">
+                <img src="socials.png" alt="Проект" class="social-image">
+                <img src="socials (1).png" alt="Проект" class="social-image">
+                <img src="socials (2).png" alt="Проект" class="social-image">
+            </div>
+        </div>
+
+        <div class="section-right">
+            <h3 class="contact-info">Остались вопросы? Заполните форму и мы вам перезвоним</h3>
+            <form>
+                <label for="name" class="label1">Имя</label>
+                <input type="text2" id="name" placeholder="Имя" value="Иван Иванов" >
+                <label for="phone" class="label1">Телефон</label>
+                <input type="tel1" id="phone" placeholder="Телефон" value="+7__ __ _ _" >
+                <label for="comments" class="label1">Комментарии</label>
+                <textarea id="comments" placeholder="Комментарии" rows="4" class="textarea1">Поле для ввода</textarea>
+                <button class="button17">Заказать звонок</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="container15">
+    <iframe src="https://yandex.ru/map-widget/v1/?feedback=map%2Fedit&feedback-context=user_profile.edit_map&ll=50.188524%2C53.198951&utm_medium=mapframe&utm_source=maps&z=17" width="1440" height="600"></iframe>
+</div>
+<footer>
+<div class="container16">
+    <img src="GRAMPUS.png" class="image9">
+    <h2 class="footer">Политика конфиденциальности</h2>
+    <button class="button20" id="open-policy">Открыть политику</button> </div>
+    <h2 class="footer1">Сайт разработан</h2>
+</div>
+</footer>
+<div id="fancybox-content3" style="display: none;">
+    <div class="fancybox-inner">
+      <h3 class="zagolovok4">Политика конфиденциальности</h3>
+        <h4 class="h4-3">1. Общие положения<br>
+            Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных ООО «Лаборатория Тест-Драйв» (далее – Оператор).</h4>
+        
+        <h4 class="h4-3"> Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.
+            Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта https://lab-td.ru/</h4>
+        <h4 class="h4-3">2. Основные понятия, используемые в Политике<br>
+            Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;<br>
+            Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);<br>
+            Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу https://lab-td.ru/
+            Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;<br>
+            Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;<br>
+            Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;<br>
+            Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными;<br>
+            Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта  https://lab-td.ru/ <br>
+            Пользователь – любой посетитель веб-сайта https://lab-td.ru/<br>
+            Предоставление персональных данных – действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц;<br>
+            Распространение персональных данных – любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом;<br>
+            Трансграничная передача персональных данных – передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу;<br>
+            Уничтожение персональных данных – любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и (или) результате которых уничтожаются материальные носители персональных данных.
+            <h4 class="h4-3"> 3. Оператор может обрабатывать следующие персональные данные Пользователя<br>
+            Электронный адрес;<br>
+            Номера телефонов;<br>
+            Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).<br>
+            Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные данные.</h4>
+            <h4 class="h4-3"> 4. Цели обработки персональных данных<br>
+            Цель обработки персональных данных Пользователя — информирование Пользователя посредством отправки электронных писем; заключение, исполнение и прекращение гражданско-правовых договоров; оказание консультативных услуг.<br>
+            Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты am@pereoborudovanie-ts.ru с пометкой «Отказ от уведомлениях о новых продуктах и услугах и специальных предложениях».<br>
+            Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.<br></h4>
+            
+            <h4 class="h4-3">5. Правовые основания обработки персональных данных
+            Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте https://lab-td.ru/;<br>
+            Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.<br>
+            Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).</h4>
+            <h4 class="h4-3">>6. Порядок сбора, хранения, передачи и других видов обработки персональных данных<br>
+            Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.<br>
+            
+            Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.<br>
+            Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.<br>
+            В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора am@pereoborudovanie-ts.ru с пометкой «Актуализация персональных данных».<br>
+            Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператора am@pereoborudovanie-ts.ru с пометкой «Отзыв согласия на обработку персональных данных».</h4>
+            <h4 class="h4-3">7. Трансграничная передача персональных данных<br>
+            Оператор до начала осуществления трансграничной передачи персональных данных обязан убедиться в том, что иностранным государством, на территорию которого предполагается осуществлять передачу персональных данных, обеспечивается надежная защита прав субъектов персональных данных.<br>
+            Трансграничная передача персональных данных на территории иностранных государств, не отвечающих вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной форме субъекта персональных данных на трансграничную передачу его персональных данных и/или исполнения договора, стороной которого является субъект персональных данных.</h4>
+            <h4 class="h4-3">8. Заключительные положения<br>
+            Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты gbo@pereoborudovanie-ts.ru.<br>
+            В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.<br>
+            Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу https://lab-td.ru/policy/ </h4>
+        </div>
+    </div>
+    <div id="fancybox-content4" style="display: none;">
+        <div class="fancybox-inner">
+            <div class="section-right">
+                <h3 class="contact-info">Остались вопросы? Заполните форму и мы вам перезвоним</h3>
+                <form>
+                    <label for="name" class="label1">Имя</label>
+                    <input type="text2" id="name" placeholder="Имя" value="Иван Иванов" >
+                    <label for="phone" class="label1">Телефон</label>
+                    <input type="tel1" id="phone" placeholder="Телефон" value="+7__ __ _ _" >
+                    <label for="comments" class="label1">Комментарии</label>
+                    <textarea id="comments" placeholder="Комментарии" rows="4" class="textarea1">Поле для ввода</textarea>
+                    <button class="button17" id="#contact-form">Заказать звонок</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="skript.js"></script> 
+</body>
+</html>
